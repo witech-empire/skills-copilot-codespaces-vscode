@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BVN Admin — Sign In</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Box Icons CDN -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body class="login-body">
+
+  <div class="login-card" role="main">
+
+    <!-- Brand -->
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">💳</div>
+      <span class="brand-name">FinAdmin BVN</span>
+    </div>
+
+    <h1>Welcome back</h1>
+    <p class="subtitle">Sign in to access your admin dashboard</p>
+
+    <form id="loginForm" novalidate>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <div class="input-wrap">
+          <i class="bx bx-envelope input-icon" aria-hidden="true"></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="admin@fintech.io"
+            autocomplete="email"
+            required
+          />
+        </div>
+        <span class="error-msg" id="emailError" role="alert"></span>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <i class="bx bx-lock-alt input-icon" aria-hidden="true"></i>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            autocomplete="current-password"
+            required
+          />
+        </div>
+        <span class="error-msg" id="passwordError" role="alert"></span>
+      </div>
+
+      <!-- Options -->
+      <div class="form-options">
+        <label class="remember-label">
+          <input type="checkbox" id="remember" />
+          Remember me
+        </label>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn-login" id="loginBtn">
+        <span class="btn-text">Sign In</span>
+        <div class="spinner" aria-hidden="true"></div>
+      </button>
+
+      <!-- General error -->
+      <span class="error-msg" id="generalError" role="alert" style="text-align:center;margin-top:10px;"></span>
+
+    </form>
+
+    <p class="login-footer" style="margin-top:14px;font-size:0.8rem;opacity:0.6;">
+      Demo: <code>admin@fintech.io</code> / <code>Admin@1234</code>
+    </p>
+
+    <p class="login-footer">
+      Don't have an account? <a href="#">Contact your administrator</a>
+    </p>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BVN Admin — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="app-layout">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="logo-icon" aria-hidden="true">💳</div>
+        <span class="logo-text">FinAdmin BVN</span>
+      </div>
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Collapse sidebar" title="Collapse sidebar">
+        <i class="bx bx-chevrons-left"></i>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Sidebar navigation">
+
+      <div class="nav-section-label">Main</div>
+
+      <a href="dashboard.html" class="nav-item active" aria-current="page">
+        <i class="bx bxs-dashboard nav-icon"></i>
+        <span class="nav-label">Dashboard</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i class="bx bxs-user-detail nav-icon"></i>
+        <span class="nav-label">BVN Verification</span>
+        <span class="nav-badge">12</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i class="bx bx-transfer nav-icon"></i>
+        <span class="nav-label">Transactions</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i class="bx bxs-bank nav-icon"></i>
+        <span class="nav-label">Accounts</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i class="bx bx-line-chart nav-icon"></i>
+        <span class="nav-label">Reports</span>
+      </a>
+
+      <div class="nav-section-label" style="margin-top:14px;">Administration</div>
+
+      <a href="#" class="nav-item">
+        <i class="bx bxs-group nav-icon"></i>
+        <span class="nav-label">Users</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i class="bx bx-shield-alt nav-icon"></i>
+        <span class="nav-label">Compliance</span>
+        <span class="nav-badge">3</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i class="bx bx-cog nav-icon"></i>
+        <span class="nav-label">Settings</span>
+      </a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-profile" id="userProfile" role="button" tabindex="0" aria-label="User menu">
+        <div class="avatar" id="sidebarAvatar" aria-hidden="true">AO</div>
+        <div class="user-info">
+          <div class="user-name" id="sidebarUserName">Admin Officer</div>
+          <div class="user-role">Super Admin</div>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div class="main-content" id="mainContent">
+
+    <!-- Navbar -->
+    <header class="navbar" role="banner">
+      <div class="navbar-left">
+        <!-- Mobile hamburger -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open sidebar">
+          <i class="bx bx-menu"></i>
+        </button>
+        <span class="page-title">Dashboard Overview</span>
+      </div>
+
+      <div class="navbar-search" role="search">
+        <i class="bx bx-search search-icon" aria-hidden="true"></i>
+        <input type="search" placeholder="Search users, BVN, transactions…" aria-label="Search" />
+      </div>
+
+      <div class="navbar-actions">
+        <button class="icon-btn" aria-label="Notifications — 3 unread">
+          <i class="bx bx-bell"></i>
+          <span class="notif-dot" aria-hidden="true"></span>
+        </button>
+        <button class="icon-btn" aria-label="Messages">
+          <i class="bx bx-message-square-dots"></i>
+        </button>
+        <div class="navbar-avatar" id="navbarAvatar" role="button" tabindex="0" aria-label="User menu" title="Admin Officer">AO</div>
+        <button class="icon-btn" id="logoutBtn" aria-label="Sign out" title="Sign out">
+          <i class="bx bx-log-out"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="page-content" id="pageContent">
+
+      <!-- Page header -->
+      <div class="page-header fade-in">
+        <h2 id="welcomeMsg">Good morning, Admin 👋</h2>
+        <p>Here's what's happening on your platform today.</p>
+      </div>
+
+      <!-- ── Stat Cards ── -->
+      <div class="stats-grid" id="statsGrid">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- ── Chart + Quick Actions ── -->
+      <div class="dashboard-grid">
+
+        <!-- Transaction Chart -->
+        <div class="panel fade-in">
+          <div class="panel-header">
+            <h3>Monthly Transaction Volume</h3>
+            <button class="panel-action">Export</button>
+          </div>
+          <div class="chart-placeholder" id="barChart" aria-label="Bar chart showing monthly transactions">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="panel fade-in">
+          <div class="panel-header">
+            <h3>Quick Actions</h3>
+          </div>
+          <div class="quick-actions">
+            <button class="quick-action-btn">
+              <div class="qa-icon icon-blue">🔍</div>
+              Verify BVN
+            </button>
+            <button class="quick-action-btn">
+              <div class="qa-icon icon-green">➕</div>
+              Add New User
+            </button>
+            <button class="quick-action-btn">
+              <div class="qa-icon icon-gold">📊</div>
+              Generate Report
+            </button>
+            <button class="quick-action-btn">
+              <div class="qa-icon icon-cyan">🏦</div>
+              Approve Account
+            </button>
+            <button class="quick-action-btn">
+              <div class="qa-icon icon-red">🚫</div>
+              Flag Transaction
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Users / BVN Table ── -->
+      <div class="panel fade-in" id="usersPanel">
+        <div class="panel-header">
+          <h3>Registered Users (BVN System)</h3>
+          <button class="panel-action" id="exportTableBtn">⬇ Export CSV</button>
+        </div>
+
+        <div class="table-wrap">
+          <table aria-label="User accounts table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>BVN</th>
+                <th>Account No.</th>
+                <th>Bank</th>
+                <th>Balance</th>
+                <th>Status</th>
+                <th>Last Login</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <span id="tableInfo">Showing 1–10 of 50 users</span>
+          <div class="pagination" id="pagination" role="navigation" aria-label="Table pagination">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div><!-- /main-content -->
+
+</div><!-- /app-layout -->
+
+<script src="app.js"></script>
+</body>
+</html>
