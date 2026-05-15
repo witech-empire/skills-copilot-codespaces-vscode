@@ -16,12 +16,12 @@ Production-minded, config-driven sidebar navigation demo for a fintech admin das
 
 ## Files
 
-- `/home/runner/work/skills-copilot-codespaces-vscode/skills-copilot-codespaces-vscode/index.html` — app shell
-- `/home/runner/work/skills-copilot-codespaces-vscode/skills-copilot-codespaces-vscode/src/nav-config.js` — typed nav config and RBAC metadata
-- `/home/runner/work/skills-copilot-codespaces-vscode/skills-copilot-codespaces-vscode/src/nav-utils.js` — RBAC filtering + active route matching utilities
-- `/home/runner/work/skills-copilot-codespaces-vscode/skills-copilot-codespaces-vscode/src/main.js` — sidebar rendering and behavior
-- `/home/runner/work/skills-copilot-codespaces-vscode/skills-copilot-codespaces-vscode/styles.css` — layout and sidebar styling
-- `/home/runner/work/skills-copilot-codespaces-vscode/skills-copilot-codespaces-vscode/test/nav-utils.test.js` — unit tests
+- `index.html` — app shell
+- `src/nav-config.js` — typed nav config and RBAC metadata
+- `src/nav-utils.js` — RBAC filtering + active route matching utilities
+- `src/main.js` — sidebar rendering and behavior
+- `styles.css` — layout and sidebar styling
+- `test/nav-utils.test.js` — unit tests
 
 ## Run
 
