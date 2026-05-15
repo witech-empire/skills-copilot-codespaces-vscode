@@ -1,0 +1,12 @@
+{
+  "name": "skills-copilot-codespaces-vscode",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "lint": "node --check src/*.js test/*.js",
+    "typecheck": "node --check src/*.js",
+    "build": "node -e \"console.log('Static dashboard: no build step required')\""
+  }
+}
